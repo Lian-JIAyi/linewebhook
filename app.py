@@ -36,11 +36,11 @@ def handle_message(event):
     if event.message.text == "123":
         message = TextSendMessage(text="你好呀~~")
         line_bot_api.reply_message(event.reply_token, message)
-        line_bot_api.reply_message(event.reply_token, ImageSendMessage(original_content_url='http://0.tcp.ngrok.io:10921/homepage/img/encryption.png', preview_image_url='http://0.tcp.ngrok.io:10921/homepage/img/encryption.png'))
+        # line_bot_api.reply_message(event.reply_token, ImageSendMessage(original_content_url='http://0.tcp.ngrok.io:10921/homepage/img/encryption.png', preview_image_url='http://0.tcp.ngrok.io:10921/homepage/img/encryption.png'))
     else:
         message = TextSendMessage(text=event.message.text)
         line_bot_api.reply_message(event.reply_token, message)
-        line_bot_api.reply_message(event.reply_token, ImageSendMessage(original_content_url='http://0.tcp.ngrok.io:10921/homepage/img/encryption.png', preview_image_url='http://0.tcp.ngrok.io:10921/homepage/img/encryption.png'))
+        # line_bot_api.reply_message(event.reply_token, ImageSendMessage(original_content_url='http://0.tcp.ngrok.io:10921/homepage/img/encryption.png', preview_image_url='http://0.tcp.ngrok.io:10921/homepage/img/encryption.png'))
 import os
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
